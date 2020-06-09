@@ -1,0 +1,127 @@
+<html>
+	<head>
+
+		<!-- Start CSS -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- End CSS -->
+		<!--Start Javascript-->
+		<script type="text/javascript" src=js/"script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!--End Javascript-->
+	</head>
+	<body>
+		<header>
+	  		<nav class="navbar">
+			    <div class="container-fluid">
+			       <div class="navbar-header">
+				  <a class="navbar-brand " >Logo</a>
+			    </div>
+			  </div>
+			</nav>
+	</header>
+	<div class="container">
+	    <div id="carousel-example-generic" class="carousel slide" data-interval="7000">
+             <!-- Wrapper for slides -->
+            <div class="carousel-inner deepskyblue" role="listbox">
+		 	<!-- First slide -->
+		 		<div class="item active current1 first">
+            		<div class="col-md-1"></div>
+            			<div id="div1" class="col-md-2 pull-left">
+            		 		<h3><strong><span style="font-size:30px">01/</span>10</strong></h3><br>
+            			</div>
+						<div id="div1" class="col-md-10 col-sm-8 col-xs-8 pull-left">
+				    		<h4>*Can select muiltiple</h4>
+				      		<h2><strong>What are your hair goals?</strong></h2><br>
+							<button class="btn btn-primary-outline btn-lg">Condition</button>
+							<button class="btn btn-primary-outline btn-lg">Fight frizz</button>
+							<button class="btn btn-primary-outline btn-lg">Repair</button>
+							<button class="btn btn-primary-outline btn-lg">Oil Control</button>
+						    <button class="btn btn-primary-outline btn-lg">Growth</button>
+							<button class="btn btn-primary-outline btn-lg">Thicken</button>
+							<button class="btn btn-primary-outline btn-lg">Enhance curls</button>
+							<button class="btn btn-primary-outline btn-lg">Protect colour</button>
+							<button class="btn btn-primary-outline btn-lg">Hydration</button>
+							<button class="btn btn-primary-outline btn-lg">Health</button>
+							<button class="btn btn-primary-outline btn-lg">Strength</button>
+							<button class="btn btn-primary-outline btn-lg">Better scapl health</button>
+				  		</div>
+				</div> <!-- /.item -->
+				<!-- Second slide -->
+				<div class="item skyblue">
+				   <div class="col-md-1"></div>
+				   		<div id="div2" class="col-md-2 pull-left">
+            		 		<h3><strong><span style="font-size:30px">02/</span>10</strong></h3><br>
+            		 	</div>
+				     	<div id="div2" class="col-md-10 col-sm-8 col-xs-8 pull-left">
+					        <h4>*Select 1 only</h4>
+					        <h2><strong>What is your hair type?</strong></h2><br>
+					        <button class="btn btn-primary-outline btn-lg">Curly</button>
+					        <button class="btn btn-primary-outline btn-lg">Straight</button>
+					        <button class="btn btn-primary-outline btn-lg">Wavy</button>	
+				     	</div>
+				</div><!-- /.item -->
+			    <!-- Third slide -->
+				<div class="item last" >
+				   <div class="col-md-1"></div>
+				   		<div id="div3" class="col-md-2 pull-left">
+            		 		<h3><strong><span style="font-size:30px">03/</span>10</strong></h3><br>
+            		 	</div>
+				       <div id="div3" class="col-md-10 col-sm-8 col-xs-8 pull-left">
+					        <h4>*can select muiltiple</h4>
+					        <h2><strong>What are your hair goals?</strong></h2><br>
+						    <button class="btn btn-primary-outline btn-lg"> Highly porous</button>
+						    <button class="btn btn-primary-outline btn-lg"> Damaged</button>
+						    <button class="btn btn-primary-outline btn-lg"> Has spilt ends</button>
+						    <button class="btn btn-primary-outline btn-lg"> Dull</button>
+						    <button class="btn btn-primary-outline btn-lg"> Growth</button>
+						    <button class="btn btn-primary-outline btn-lg"> Brittle</button>
+						    <button class="btn btn-primary-outline btn-lg"> Thin and or flat</button>
+						    <button class="btn btn-primary-outline btn-lg"> Dry</button>
+						    <button class="btn btn-primary-outline btn-lg"> Oily</button>
+					    </div>
+		        </div><!-- /.item -->
+				<div class="row">				
+		 		    <div class="btn-toolbar" style="padding-left: 137px">
+		                <div class="col-md-6">
+					        <button class="btn btn-primary btn-lg previous" id="prev" >Previous</button>
+					    </div>
+		                <div class="col-md-6">
+					        <button class="btn btn-primary btn-lg nextBtn " id="next" >Next</button>
+					    </div>
+				    </div>
+		        </div>
+	        </div><!-- /.carousel-inner -->
+         </div><!-- /.carousel -->
+      </div><!-- /.container -->
+    </body>
+</html>
+<script>
+	$('#next').click(function() {
+	  $('.current').removeClass('current').hide()
+	    .next().show().addClass('current'); 
+	  $('.current1').removeClass('current1').removeClass('active').next().addClass('active').addClass('current1');
+	    $( "div.current1" ).prevAll().find('span').addClass('active1');
+
+	  if ($('.current1').hasClass('last')) {
+	    $('#next').css('display', 'none');
+	  }
+	  $('#prev').css('display', 'block');
+	});
+
+	$('#prev').click(function() {
+	  $('.current').removeClass('current').hide()
+	    .prev().show().addClass('current');
+	  $('.current1').removeClass('current1').removeClass('active').prev().addClass('active').addClass('current1');
+
+	  $("div.current1").find('span').removeClass('active1'); 
+	  
+	  if ($('.current1').hasClass('first')) {
+	    $('#prev').css('display', 'none');
+	  }
+	  $('#next').css('display', 'block');
+	});
+</script>
